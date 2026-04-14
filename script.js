@@ -92,7 +92,7 @@ const projects = {
     }
 };
 
-function createProjectButtons() {
+function createProjectCards() {
     const projectList = document.getElementById("projectList");
     const keys = Object.keys(projects);
 
@@ -188,25 +188,7 @@ function showProject(key) {
 }
 
 function bindEvents() {
-    const scrollProjectButton = document.getElementById("scrollProjectButton");
-    const showUIProjectButton = document.getElementById("showUIProjectButton");
-    const projectSection = document.getElementById("projects");
     const projectList = document.getElementById("projectList");
-
-    if (scrollProjectButton !== null && projectSection !== null) {
-        scrollProjectButton.addEventListener("click", function () {
-            projectSection.scrollIntoView();
-        });
-    }
-
-    if (showUIProjectButton !== null) {
-        showUIProjectButton.addEventListener("click", function () {
-            showProject("ui");
-            if (projectSection !== null) {
-                projectSection.scrollIntoView();
-            }
-        });
-    }
 
     if (projectList !== null) {
         projectList.addEventListener("click", function (event) {
@@ -226,7 +208,7 @@ function bindEvents() {
 }
 
 function initializePage() {
-    createProjectButtons();
+    createProjectCards();
     bindEvents();
     showProject("slime");
 }
