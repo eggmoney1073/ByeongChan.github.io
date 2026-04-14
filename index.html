@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="hero">
-        <div class="container hero-grid">
+        <div class="container">
             <section class="panel hero-main">
                 <span class="eyebrow">GAME DEVELOPER PORTFOLIO</span>
                 <h1>
@@ -18,37 +18,9 @@
                 <p>
                     Unity 기반으로 게임플레이, UI, 시스템 구현을 중심으로 작업하고 있는
                     개발자 포트폴리오 실험 페이지입니다.
-                    이 페이지는 버튼 클릭 시 같은 화면 안에서 프로젝트 상세 내용이
-                    변경되는 구조를 테스트하기 위해 제작되었습니다.
+                    아래 프로젝트 카드를 클릭하면 같은 페이지 안에서 상세 내용이 변경됩니다.
                 </p>
-
-                <div class="hero-actions">
-                    <button class="btn btn-primary" id="scrollProjectButton">프로젝트 보기</button>
-                    <button class="btn btn-secondary" id="showUIProjectButton">UI Project 보기</button>
-                </div>
             </section>
-
-            <aside class="panel hero-side">
-                <div class="stat-card">
-                    <div class="stat-label">프로젝트 수</div>
-                    <div class="stat-value">4</div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-label">주 사용 엔진</div>
-                    <div class="stat-value">Unity</div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-label">주요 관심 분야</div>
-                    <div class="stat-value">Gameplay</div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-label">작업 성향</div>
-                    <div class="stat-value">System</div>
-                </div>
-            </aside>
         </div>
     </header>
 
@@ -56,14 +28,12 @@
         <div class="container">
             <h2 class="section-title">Selected Projects</h2>
             <p class="section-desc">
-                왼쪽의 프로젝트 버튼을 누르면 오른쪽 상세 내용이 즉시 바뀝니다.
-                페이지를 새로 열지 않고 한 화면 안에서 내용만 변경됩니다.
+                프로젝트 카드를 선택하면 아래 상세 영역 내용이 교체됩니다.
             </p>
 
-            <div class="project-layout">
-                <section class="panel project-list" id="projectList"></section>
-                <section class="panel project-detail" id="projectDetail"></section>
-            </div>
+            <section class="project-card-row" id="projectList"></section>
+
+            <section class="panel project-detail" id="projectDetail"></section>
         </div>
     </main>
 
